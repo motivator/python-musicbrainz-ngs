@@ -409,7 +409,11 @@ def parse_label_info(li):
 	return result
 
 def parse_track_list(tl):
-	result = []
+	result = {}
+	attribs = ["count"]
+	result.update(parse_attributes(attribs, tl))
+
+	result['tracks'] = []
 	for t in tl:
 		result.append(parse_track(t))
 	return result
