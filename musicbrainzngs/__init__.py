@@ -394,7 +394,7 @@ def _mb_request(path, method='GET', auth_required=False, client_required=False,
 	# Add client if required.
 	if client_required and _client == "":
 		raise UsageError("set a client name with "
-						 "musicbrainz.set_client(\"client-version\")")
+						 "musicbrainzngs.set_client(\"client-version\")")
 	elif client_required:
 		args["client"] = _client
 
@@ -424,7 +424,7 @@ def _mb_request(path, method='GET', auth_required=False, client_required=False,
 	if auth_required:
 		if not user:
 			raise UsageError("authorization required; "
-							 "use musicbrainz.auth(u, p) first")
+							 "use musicbrainzngs.auth(u, p) first")
 		passwordMgr = _RedirectPasswordMgr()
 		authHandler = _DigestAuthHandler(passwordMgr)
 		authHandler.add_password("musicbrainz.org", (), user, password)

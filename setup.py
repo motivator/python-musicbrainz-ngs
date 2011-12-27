@@ -46,7 +46,7 @@ setup(
     description="python bindings for musicbrainz NGS webservice",
     author="Alastair Porter",
     url="https://github.com/alastair/python-musicbrainz-ngs",
-    py_modules=['mbxml', 'musicbrainz'],
+    packages=['musicbrainzngs'],
     cmdclass={'test': test },
 )
 
